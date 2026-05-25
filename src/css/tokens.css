@@ -1,0 +1,143 @@
+/*
+ * Design System tokens — public contract.
+ *
+ * All design decisions (color, radius) are exposed here as CSS custom
+ * properties. The Tailwind preset (./tailwind) maps utilities
+ * (bg-primary, text-muted-foreground, rounded-md, …) to these vars,
+ * and SCSS authors can read them via `./scss/_tokens`.
+ *
+ * To theme at runtime, override these variables on a wrapper element
+ * (e.g. add the `.dark` class to <html>).
+ *
+ * NOTE: color triplets here are synced from `tokens.preview.css`
+ * by running `npm run tokens:sync`. Edit colors in the preview file to
+ * keep VS Code color swatches in sync, then run the command.
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* text */
+    --text-color-default: 240 10% 3.9%;
+    --text-color-strong:  0 0% 100%;
+    --text-color-muted:   240 3.8% 46.1%;
+
+    /* surface */
+    --surface-default:    0 0% 100%;
+    --surface-strong:     240 10% 3.9%;
+    --surface-raised:     0 0% 100%;
+    --surface-secondary:  240 4.8% 95.9%;
+    --surface-muted:      240 4.8% 95.9%;
+
+    /* color */
+    --color-primary:     240 5.9% 10%;
+    --color-accent:      240 4.8% 95.9%;
+    --color-destructive: 0 84.2% 60.2%;
+
+    /* other */
+    --border:  240 5.9% 90%;
+    --input:   240 5.9% 90%;
+    --ring:    240 5.9% 10%;
+    --divider: 240 5.9% 90%;
+    --radius:  0.5rem;
+  }
+
+  .dark {
+    /* text */
+    --text-color-default: 0 0% 98%;
+    --text-color-strong:  240 10% 3.9%;
+    --text-color-muted:   240 5% 64.9%;
+
+    /* surface */
+    --surface-default:    240 10% 3.9%;
+    --surface-strong:     0 0% 98%;
+    --surface-raised:     240 10% 3.9%;
+    --surface-secondary:  240 3.7% 15.9%;
+    --surface-muted:      240 3.7% 15.9%;
+
+    /* color */
+    --color-primary:     0 0% 98%;
+    --color-accent:      240 3.7% 15.9%;
+    --color-destructive: 0 62.8% 30.6%;
+
+    /* other */
+    --border:  240 3.7% 15.9%;
+    --input:   240 3.7% 15.9%;
+    --ring:    240 4.9% 83.9%;
+    --divider: 0 0% 0%;
+  }
+
+  /*
+   * Mars theme — a rusty, dusty palette to prove the token contract.
+   * Same variables, different values: everything that reads a token
+   * (bg-primary, text-foreground, hsl(var(--color-accent)), etc.) retints automatically.
+   */
+  .theme-mars {
+
+    /* text */
+    --text-color-default: 14 55% 14%;
+    --text-color-strong:  0 0% 100%;
+    --text-color-muted:   18 22% 38%;
+
+    /* surface */
+    --surface-default:    20 30% 96%;
+    --surface-strong:     14 78% 46%;
+    --surface-raised:     24 40% 98%;
+    --surface-secondary:  28 55% 88%;
+    --surface-muted:      28 40% 92%;
+
+    /* color */
+    --color-primary:     14 78% 46%;
+    --color-accent:      36 90% 60%;
+    --color-destructive: 0 72% 42%;
+
+    /* other */
+    --border:  22 40% 82%;
+    --input:   22 40% 82%;
+    --ring:    14 78% 46%;
+    --divider: 0 100% 38%;
+    --radius:  0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--surface-default));
+    color: hsl(var(--text-color-default));
+  }
+
+  .dark body {
+    background-color: hsl(var(--surface-default));
+    color: hsl(var(--text-color-default));
+  }
+
+  .theme-mars body {
+    background-color: hsl(var(--surface-default));
+    color: hsl(var(--text-color-default));
+  }
+}
+
+@layer utilities {
+  /* text */
+  .text-color-default  { color: hsl(var(--text-color-default)); }
+  .text-color-strong   { color: hsl(var(--text-color-strong)); }
+  .text-color-muted    { color: hsl(var(--text-color-muted)); }
+
+  /* surface */
+  .surface-default     { background-color: hsl(var(--surface-default)); }
+  .surface-strong      { background-color: hsl(var(--surface-strong)); }
+  .surface-raised      { background-color: hsl(var(--surface-raised)); }
+  .surface-secondary   { background-color: hsl(var(--surface-secondary)); }
+  .surface-muted       { background-color: hsl(var(--surface-muted)); }
+
+  /* color */
+  .color-primary       { background-color: hsl(var(--color-primary)); }
+  .color-accent        { background-color: hsl(var(--color-accent)); }
+  .color-destructive   { background-color: hsl(var(--color-destructive)); }
+}

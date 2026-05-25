@@ -1,0 +1,35 @@
+{
+  "name": "custom-design-system",
+  "version": "0.1.0",
+  "description": "Token-first design system: CSS variables, Tailwind preset, SCSS bridge. Seeded from vue-playground.",
+  "type": "module",
+  "private": true,
+  "sideEffects": [
+    "src/css/*.css",
+    "src/scss/*.scss"
+  ],
+  "files": [
+    "src",
+    "scripts/sync-tokens.mjs"
+  ],
+  "exports": {
+    "./tailwind": "./src/tailwind/preset.mjs",
+    "./css/tokens.css": "./src/css/tokens.css",
+    "./css/tokens.preview.css": "./src/css/tokens.preview.css",
+    "./scss/tokens": "./src/scss/_tokens.scss",
+    "./scss/variables": "./src/scss/_variables.scss",
+    "./scss/global": "./src/scss/global.scss"
+  },
+  "scripts": {
+    "tokens:sync": "node scripts/sync-tokens.mjs",
+    "push": "yalc push",
+    "publish:local": "yalc publish"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0",
+    "tailwindcss-animate": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss-animate": { "optional": true }
+  }
+}

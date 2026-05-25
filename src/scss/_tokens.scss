@@ -1,0 +1,22 @@
+// Design-token bridge for SCSS authors.
+//
+// The canonical tokens live in `../css/tokens.css` as CSS variables
+// (--primary, --foreground, --radius, …). This file exposes a small set of
+// SCSS aliases that are still backed by those runtime variables, so component
+// `.scss` files stay themable (dark mode + future runtime themes).
+//
+// Prefer Tailwind utilities (bg-primary, text-muted-foreground, rounded-md)
+// over importing this file. Use it only when authoring component-local SCSS.
+
+$color-primary:      hsl(var(--color-primary));
+$text-color-default: hsl(var(--text-color-default));
+$text-color-strong:  hsl(var(--text-color-strong));
+$surface-default:    hsl(var(--surface-default));
+$surface-strong:     hsl(var(--surface-strong));
+$surface-muted:             hsl(var(--surface-muted));
+$text-color-muted:          hsl(var(--text-color-muted));
+$color-destructive:         hsl(var(--color-destructive));
+$color-border:              hsl(var(--border));
+$color-ring:                hsl(var(--ring));
+
+$radius: var(--radius);
