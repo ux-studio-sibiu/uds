@@ -11,7 +11,7 @@
 /* --- Light (default :root) --- */
 .preview-light {
   /* text */
-  --text-color-default: hsl(180, 10%, 4%);
+  --text-color-default: hsl(240 10% 3.9%);
   --text-color-strong:  hsl(0 0% 100%);
   --text-color-muted:   hsl(240 3.8% 46.1%);
   /* surface */
@@ -75,4 +75,27 @@
   --input:   hsl(22 40% 82%);
   --ring:    hsl(14 78% 46%);
   --divider: hsl(0 100% 38%);
+}
+
+/* --- Winamp --- */
+.preview-winamp {
+  /* text */
+  --text-color-default: hsl(120 100% 60%);
+  --text-color-strong:  hsl(0 0% 0%);
+  --text-color-muted:   hsl(120 40% 45%);
+  /* surface */
+  --surface-default:    hsl(0 0% 8%);
+  --surface-strong:     hsl(120 100% 50%);
+  --surface-raised:     hsl(0 0% 12%);
+  --surface-secondary:  hsl(0 0% 18%);
+  --surface-muted:      hsl(0 0% 15%);
+  /* color */
+  --color-primary:     hsl(120 100% 50%);
+  --color-accent:      hsl(45 100% 55%);
+  --color-destructive: hsl(0 90% 55%);
+  /* other */
+  --border:  hsl(0 0% 25%);
+  --input:   hsl(0 0% 20%);
+  --ring:    hsl(120 100% 50%);
+  --divider: hsl(120 60% 30%);
 }
