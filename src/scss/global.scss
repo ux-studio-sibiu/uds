@@ -1,4 +1,8 @@
-@use './variables' as *;
+/*
+ * Base global styles for consumers of the design system.
+ * Reads from the CSS-variable token contract (../css/tokens.css), so theme
+ * class swaps (.dark, .theme-mars, …) automatically retint these rules.
+ */
 
 *,
 *::before,
@@ -9,12 +13,12 @@
 }
 
 body {
-  font-family: $font-family;
-  color: $color-text;
+  font-family: 'Open Sans', sans-serif;
+  color: hsl(var(--text-color-default));
   line-height: 1.6;
 }
 
 a {
-  color: $color-primary;
+  color: hsl(var(--color-primary));
   text-decoration: none;
 }

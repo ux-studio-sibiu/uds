@@ -20,26 +20,28 @@
 @layer base {
   :root {
     /* text */
-    --text-color-default: 240 10% 3.9%;
-    --text-color-strong:  0 0% 100%;
-    --text-color-muted:   240 3.8% 46.1%;
+    --text-color-default: 240 10% 3.9%; 
+    --text-color-default: 96 100% 33%;
+
+    --text-color-strong: 0 0% 100%;
+    --text-color-muted: 240 3.8% 46.1%;
 
     /* surface */
-    --surface-default:    0 0% 100%;
-    --surface-strong:     240 10% 3.9%;
-    --surface-raised:     0 0% 100%;
-    --surface-secondary:  240 4.8% 95.9%;
-    --surface-muted:      240 4.8% 95.9%;
+    --surface-default: 0 0% 100%;
+    --surface-strong: 240 10% 3.9%;
+    --surface-raised: 0 0% 100%;
+    --surface-secondary: 240 4.8% 95.9%;
+    --surface-muted: 240 4.8% 95.9%;
 
     /* color */
-    --color-primary:     240 5.9% 10%;
-    --color-accent:      240 4.8% 95.9%;
+    --color-primary: 240 5.9% 10%;
+    --color-accent: 240 4.8% 95.9%;
     --color-destructive: 0 84.2% 60.2%;
 
     /* other */
-    --border:  240 5.9% 90%;
-    --input:   240 5.9% 90%;
-    --ring:    240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --divider: 240 5.9% 90%;
     --radius:  0.5rem;
   }
@@ -47,25 +49,25 @@
   .dark {
     /* text */
     --text-color-default: 0 0% 98%;
-    --text-color-strong:  240 10% 3.9%;
-    --text-color-muted:   240 5% 64.9%;
+    --text-color-strong: 240 10% 3.9%;
+    --text-color-muted: 240 5% 64.9%;
 
     /* surface */
-    --surface-default:    240 10% 3.9%;
-    --surface-strong:     0 0% 98%;
-    --surface-raised:     240 10% 3.9%;
-    --surface-secondary:  240 3.7% 15.9%;
-    --surface-muted:      240 3.7% 15.9%;
+    --surface-default: 240 10% 3.9%;
+    --surface-strong: 0 0% 98%;
+    --surface-raised: 240 10% 3.9%;
+    --surface-secondary: 240 3.7% 15.9%;
+    --surface-muted: 240 3.7% 15.9%;
 
     /* color */
-    --color-primary:     0 0% 98%;
-    --color-accent:      240 3.7% 15.9%;
+    --color-primary: 0 0% 98%;
+    --color-accent: 240 3.7% 15.9%;
     --color-destructive: 0 62.8% 30.6%;
 
     /* other */
-    --border:  240 3.7% 15.9%;
-    --input:   240 3.7% 15.9%;
-    --ring:    240 4.9% 83.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
     --divider: 0 0% 0%;
   }
 
@@ -78,25 +80,25 @@
 
     /* text */
     --text-color-default: 14 55% 14%;
-    --text-color-strong:  0 0% 100%;
-    --text-color-muted:   18 22% 38%;
+    --text-color-strong: 0 0% 100%;
+    --text-color-muted: 18 22% 38%;
 
     /* surface */
-    --surface-default:    20 30% 96%;
-    --surface-strong:     14 78% 46%;
-    --surface-raised:     24 40% 98%;
-    --surface-secondary:  28 55% 88%;
-    --surface-muted:      28 40% 92%;
+    --surface-default: 20 30% 96%;
+    --surface-strong: 14 78% 46%;
+    --surface-raised: 24 40% 98%;
+    --surface-secondary: 28 55% 88%;
+    --surface-muted: 28 40% 92%;
 
     /* color */
-    --color-primary:     14 78% 46%;
-    --color-accent:      36 90% 60%;
+    --color-primary: 14 78% 46%;
+    --color-accent: 36 90% 60%;
     --color-destructive: 0 72% 42%;
 
     /* other */
-    --border:  22 40% 82%;
-    --input:   22 40% 82%;
-    --ring:    14 78% 46%;
+    --border: 22 40% 82%;
+    --input: 22 40% 82%;
+    --ring: 14 78% 46%;
     --divider: 0 100% 38%;
     --radius:  0.75rem;
   }
