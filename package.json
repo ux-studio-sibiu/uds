@@ -12,22 +12,16 @@
     "url": "git+https://github.com/ux-studio-sibiu/uds.git"
   },
   "files": [
-    "src",
-    "scripts/sync-tokens.mjs"
+    "src"
   ],
   "main": "./src/tailwind/preset.mjs",
   "exports": {
     ".": "./src/tailwind/preset.mjs",
     "./tokens.css": "./src/css/tokens.css",
-    "./tokens.preview.css": "./src/css/tokens.preview.css",
     "./tokens.scss": "./src/scss/_tokens.scss",
     "./scss/*": "./src/scss/*"
   },
   "scripts": {
-    "tokens:sync": "node scripts/sync-tokens.mjs",
-    "prepare": "node scripts/sync-tokens.mjs",
-    "push": "yalc push",
-    "publish:local": "yalc publish",
     "release": "git push && npm version patch -m \"chore: release v%s\" && git push --follow-tags",
     "release:minor": "git push && npm version minor -m \"chore: release v%s\" && git push --follow-tags",
     "release:major": "git push && npm version major -m \"chore: release v%s\" && git push --follow-tags"

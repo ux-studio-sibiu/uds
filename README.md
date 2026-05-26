@@ -30,19 +30,23 @@ export default {
 
 For SCSS imports from `node_modules`, the consumer's bundler needs `loadPaths: ['node_modules']` (Vite) or equivalent.
 
-## Develop alongside a consumer (yalc)
+## Develop alongside a consumer
+
+In the consumer repo, point the dependency at the local clone:
 
 ```sh
-# one-time, in the consumer repo
-npm i -g yalc
-yalc add custom-design-system
+npm pkg set dependencies.custom-design-system="file:./path/to/uds"
 npm install
-
-# in this repo, after edits
-yalc push
 ```
 
-Token edits: edit `src/css/tokens.preview.css` (swatches in VS Code), then `npm run tokens:sync && yalc push`.
+npm creates a junction in `node_modules/custom-design-system` pointing at the local folder, so edits to `src/**` are reflected immediately — just refresh the dev server.
+
+To switch back to a git-published version:
+
+```sh
+npm pkg set dependencies.custom-design-system="github:ux-studio-sibiu/uds#main"
+npm update custom-design-system
+```
 
 ## Publish (later)
 

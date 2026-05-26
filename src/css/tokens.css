@@ -8,10 +8,6 @@
  *
  * To theme at runtime, override these variables on a wrapper element
  * (e.g. add the `.dark` class to <html>).
- *
- * NOTE: color triplets here are synced from `tokens.preview.css`
- * by running `npm run tokens:sync`. Edit colors in the preview file to
- * keep VS Code color swatches in sync, then run the command.
  */
 @tailwind base;
 @tailwind components;
@@ -20,9 +16,9 @@
 @layer base {
   :root {
     /* text */
-    --text-color-default: 240 10% 3.9%; 
+    --text-color-default: 240 10% 3.9%;
     --text-color-default: 96 100% 33%;
-
+    
     --text-color-strong: 0 0% 100%;
     --text-color-muted: 240 3.8% 46.1%;
 
