@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where yalc *)",
+      "Bash(npm root *)",
+      "Bash(npm i *)",
+      "Bash(yalc publish *)",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force; Write-Output \"Killed PID $\\($_.OwningProcess\\)\" } } else { Write-Output \"Nothing on port 3000\" })",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s -o /tmp/tokens.css -w \"HTTP %{http_code}\\\\n\" 'http://localhost:3000/_nuxt/@fs/C:/Users/razvan.turcanu/Desktop/casedeschise/vue-playground/.yalc/custom-design-system/src/css/tokens.css')",
+      "Read(//tmp/**)",
+      "Bash(curl -s 'http://localhost:3000/_nuxt/@fs/C:/Users/razvan.turcanu/Desktop/casedeschise/vue-playground/node_modules/tailwindcss/tailwind.css' -o /tmp/tw.css)",
+      "Bash(yalc add *)",
+      "Bash(rm -v \"app/assets/css/shadcn.css\" \"app/assets/css/shadcn.preview.css\" \"app/assets/scss/_variables.scss\" \"app/assets/scss/_tokens.scss\" \"app/assets/scss/global.scss\" \"scripts/sync-tokens.mjs\")",
+      "Bash(rmdir app/assets/css app/assets/scss app/assets scripts)",
+      "Bash(curl -s 'http://localhost:3000/_nuxt/@fs/C:/Users/razvan.turcanu/Desktop/casedeschise/go-to-mars-wizard-vue/node_modules/tailwindcss/tailwind.css' -o /tmp/tw2.css)",
+      "Bash(curl -s -L -o /dev/null -w \"Final: HTTP %{http_code} → %{url_effective}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -L http://localhost:3000/)",
+      "Bash(rm -f \"C:/Users/razvan.turcanu/Desktop/casedeschise/go-to-mars-wizard-vue/dev.log\"; echo \"ok\")"
+    ]
+  }
+}

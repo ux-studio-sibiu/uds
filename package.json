@@ -12,14 +12,7 @@
     "src",
     "scripts/sync-tokens.mjs"
   ],
-  "exports": {
-    "./tailwind": "./src/tailwind/preset.mjs",
-    "./css/tokens.css": "./src/css/tokens.css",
-    "./css/tokens.preview.css": "./src/css/tokens.preview.css",
-    "./scss/tokens": "./src/scss/_tokens.scss",
-    "./scss/variables": "./src/scss/_variables.scss",
-    "./scss/global": "./src/scss/global.scss"
-  },
+  "main": "./src/tailwind/preset.mjs",
   "scripts": {
     "tokens:sync": "node scripts/sync-tokens.mjs",
     "push": "yalc push",
