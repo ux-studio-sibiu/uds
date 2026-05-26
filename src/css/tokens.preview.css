@@ -1,0 +1,78 @@
+/*
+ * Color preview helper — NOT imported into the consumer build.
+ *
+ * Uses literal `hsl(H S% L%)` values so VS Code's built-in color
+ * decorator renders a swatch next to every line. This file is a
+ * manual visual reference only — there is no sync script, so when
+ * you change a token in `tokens.css`, update the matching line here
+ * by hand if you want the swatch to stay accurate.
+ */
+
+/* --- Light (default :root) --- */
+.preview-light {
+  /* text */
+  --text-color-default: hsl(30, 10%, 4%);
+  --text-color-strong:  hsl(0 0% 100%);
+  --text-color-muted:   hsl(240 3.8% 46.1%);
+  /* surface */
+  --surface-default:    hsl(0 0% 100%);
+  --surface-strong:     hsl(240 10% 3.9%);
+  --surface-raised:     hsl(0 0% 100%);
+  --surface-secondary:  hsl(240 4.8% 95.9%);
+  --surface-muted:      hsl(240 4.8% 95.9%);
+  /* color */
+  --color-primary:     hsl(240 5.9% 10%);
+  --color-accent:      hsl(240 4.8% 95.9%);
+  --color-destructive: hsl(0 84.2% 60.2%);
+  /* other */
+  --border:  hsl(240 5.9% 90%);
+  --input:   hsl(240 5.9% 90%);
+  --ring:    hsl(240 5.9% 10%);
+  --divider: hsl(240 5.9% 90%);
+}
+
+/* --- Dark --- */
+.preview-dark {
+  /* text */
+  --text-color-default: hsl(0 0% 98%);
+  --text-color-strong:  hsl(240 10% 3.9%);
+  --text-color-muted:   hsl(240 5% 64.9%);
+  /* surface */
+  --surface-default:    hsl(240 10% 3.9%);
+  --surface-strong:     hsl(0 0% 98%);
+  --surface-raised:     hsl(240 10% 3.9%);
+  --surface-secondary:  hsl(240 3.7% 15.9%);
+  --surface-muted:      hsl(240 3.7% 15.9%);
+  /* color */
+  --color-primary:     hsl(0 0% 98%);
+  --color-accent:      hsl(240 3.7% 15.9%);
+  --color-destructive: hsl(0 62.8% 30.6%);
+  /* other */
+  --border:  hsl(240 3.7% 15.9%);
+  --input:   hsl(240 3.7% 15.9%);
+  --ring:    hsl(240 4.9% 83.9%);
+  --divider: hsl(0 0% 0%);
+}
+
+/* --- Mars --- */
+.preview-mars {
+  /* text */
+  --text-color-default: hsl(14 55% 14%);
+  --text-color-strong:  hsl(0 0% 100%);
+  --text-color-muted:   hsl(18 22% 38%);
+  /* surface */
+  --surface-default:    hsl(20 30% 96%);
+  --surface-strong:     hsl(14 78% 46%);
+  --surface-raised:     hsl(24 40% 98%);
+  --surface-secondary:  hsl(28 55% 88%);
+  --surface-muted:      hsl(28 40% 92%);
+  /* color */
+  --color-primary:     hsl(14 78% 46%);
+  --color-accent:      hsl(36 90% 60%);
+  --color-destructive: hsl(0 72% 42%);
+  /* other */
+  --border:  hsl(22 40% 82%);
+  --input:   hsl(22 40% 82%);
+  --ring:    hsl(14 78% 46%);
+  --divider: hsl(0 100% 38%);
+}
