@@ -27,7 +27,10 @@
     "tokens:sync": "node scripts/sync-tokens.mjs",
     "prepare": "node scripts/sync-tokens.mjs",
     "push": "yalc push",
-    "publish:local": "yalc publish"
+    "publish:local": "yalc publish",
+    "release": "git push && npm version patch -m \"chore: release v%s\" && git push --follow-tags",
+    "release:minor": "git push && npm version minor -m \"chore: release v%s\" && git push --follow-tags",
+    "release:major": "git push && npm version major -m \"chore: release v%s\" && git push --follow-tags"
   },
   "peerDependencies": {
     "tailwindcss": "^3.4.0",
