@@ -3,18 +3,29 @@
   "version": "0.1.0",
   "description": "Token-first design system: CSS variables, Tailwind preset, SCSS bridge. Seeded from vue-playground.",
   "type": "module",
-  "private": true,
   "sideEffects": [
     "src/css/*.css",
     "src/scss/*.scss"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ux-studio-sibiu/uds.git"
+  },
   "files": [
     "src",
     "scripts/sync-tokens.mjs"
   ],
   "main": "./src/tailwind/preset.mjs",
+  "exports": {
+    ".": "./src/tailwind/preset.mjs",
+    "./tokens.css": "./src/css/tokens.css",
+    "./tokens.preview.css": "./src/css/tokens.preview.css",
+    "./tokens.scss": "./src/scss/_tokens.scss",
+    "./scss/*": "./src/scss/*"
+  },
   "scripts": {
     "tokens:sync": "node scripts/sync-tokens.mjs",
+    "prepare": "node scripts/sync-tokens.mjs",
     "push": "yalc push",
     "publish:local": "yalc publish"
   },
