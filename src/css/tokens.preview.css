@@ -11,7 +11,7 @@
 /* --- Light (default :root) --- */
 .preview-light {
   /* text */
-  --text-color-default: hsl(30, 10%, 4%);
+  --text-color-default: hsl(180, 10%, 4%);
   --text-color-strong:  hsl(0 0% 100%);
   --text-color-muted:   hsl(240 3.8% 46.1%);
   /* surface */
