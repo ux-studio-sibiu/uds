@@ -15,6 +15,13 @@
 
 @layer base {
   :root {
+    /*
+     * Tell Chromium-based browsers we already style for our own dark/light
+     * themes. Without this, Chrome's "Auto Dark Mode for Web Contents" flag
+     * will apply its own image dimming on top of `.dark`.
+     */
+    color-scheme: light;
+
     /* text */
     --text-color-default: 240 10% 3.9%;
     
@@ -42,6 +49,8 @@
   }
 
   .dark {
+    color-scheme: dark;
+
     /* text */
     --text-color-default: 0 0% 98%;
     --text-color-strong: 240 10% 3.9%;
@@ -72,6 +81,7 @@
    * (bg-primary, text-foreground, hsl(var(--color-accent)), etc.) retints automatically.
    */
   .theme-mars {
+    color-scheme: light;
 
     /* text */
     --text-color-default: 14 55% 14%;
@@ -105,6 +115,7 @@
    * corners. Pure nostalgia, same token contract.
    */
   .theme-winamp {
+    color-scheme: dark;
 
     /* text */
     --text-color-default: 120 100% 60%;

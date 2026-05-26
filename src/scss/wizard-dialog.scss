@@ -1,0 +1,70 @@
+/*
+ * WizardDialog — base styles (design-system layer).
+ *
+ * Reads only from the token contract (`./tokens.css`), so the default `:root`
+ * palette, `.dark`, `.theme-mars`, `.theme-winamp`, etc. all retint these
+ * rules automatically.
+ *
+ * Layout (flex, gap, sizing) stays as Tailwind utilities on the component
+ * template. This file owns *visual identity*: colors, borders, focus rings,
+ * radii, icon sizing.
+ *
+ * Component-specific deviations per theme live in sibling files:
+ *   wizard-dialog.theme-dark.scss
+ *   wizard-dialog.theme-mars.scss
+ *   wizard-dialog.theme-winamp.scss
+ *
+ * Class naming: flat `wizard-dialog-<part>` (no BEM `&__` nesting) so every
+ * class is greppable across consuming apps.
+ *
+ * Consumers can layer additional rules in a scoped `.scss` next to their
+ * component without forking this file.
+ */
+
+.wizard-dialog {
+  min-height: 80vh;
+}
+
+.wizard-dialog-header {
+  border-bottom-color: hsl(var(--divider));
+}
+
+.wizard-dialog-footer {
+  border-top-color: hsl(var(--divider));
+}
+
+.wizard-dialog-sidebar {
+  width: 20rem;
+  border-right-color: hsl(var(--divider));
+}
+
+.wizard-dialog-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.wizard-dialog-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(var(--radius) - 0.375rem);
+  color: hsl(var(--text-color-muted));
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 1; }
+
+  &:focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px hsl(var(--surface-default)),
+      0 0 0 4px hsl(var(--ring));
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

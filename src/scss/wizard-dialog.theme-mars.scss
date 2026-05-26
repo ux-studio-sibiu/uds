@@ -1,0 +1,15 @@
+/*
+ * WizardDialog — Mars theme overrides.
+ *
+ * Token retinting (colors, radius, etc.) already happens via `.theme-mars` in
+ * tokens.css. Add rules here only when this theme needs structural or
+ * non-token-driven tweaks (different font, decoration, sizing) on top.
+ *
+ * Pattern:
+ *   .theme-mars .wizard-dialog-<part> { ... }
+ */
+
+// .theme-mars .wizard-dialog-title {
+//   font-family: 'Cinzel', serif;
+//   letter-spacing: 0.05em;
+// }

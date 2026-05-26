@@ -1,0 +1,15 @@
+/*
+ * WizardDialog — Winamp theme overrides.
+ *
+ * Token retinting (colors, radius, etc.) already happens via `.theme-winamp`
+ * in tokens.css. Add rules here only when this theme needs structural or
+ * non-token-driven tweaks (different font, decoration, sizing) on top.
+ *
+ * Pattern:
+ *   .theme-winamp .wizard-dialog-<part> { ... }
+ */
+
+// .theme-winamp .wizard-dialog-title {
+//   font-family: 'Share Tech Mono', monospace;
+//   text-transform: uppercase;
+// }

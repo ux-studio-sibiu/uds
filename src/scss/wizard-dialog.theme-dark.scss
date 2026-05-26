@@ -1,0 +1,14 @@
+/*
+ * WizardDialog — Dark theme overrides.
+ *
+ * Token retinting (colors, radius, etc.) already happens via `.dark` in
+ * tokens.css. Add rules here only when this theme needs structural or
+ * non-token-driven tweaks (different font, decoration, sizing) on top.
+ *
+ * Pattern:
+ *   .dark .wizard-dialog-<part> { ... }
+ */
+
+// .dark .wizard-dialog-close {
+//   opacity: 0.85;
+// }
