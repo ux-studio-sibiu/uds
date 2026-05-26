@@ -1,6 +1,6 @@
 {
   "name": "custom-design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Token-first design system: CSS variables, Tailwind preset, SCSS bridge. Seeded from vue-playground.",
   "type": "module",
   "sideEffects": [
