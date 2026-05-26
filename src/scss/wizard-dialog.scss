@@ -33,6 +33,39 @@
   border-top-color: hsl(var(--divider));
 }
 
+// Per-step footer: each step renders its own action bar below its scrollable
+// content (replaces the old single portal footer). Same divider tint as
+// `.wizard-dialog-footer` so theming is consistent across steps.
+.wizard-dialog-step-footer {
+  border-top-color: hsl(var(--divider));
+}
+
+// Two-column layout primitive for step forms.
+//
+// Collapses to a single column under the `sm` breakpoint (640px) so dense
+// admission forms stay readable on phones. Use `.wizard-dialog-grid-span-full`
+// on a child to escape the grid (e.g. for full-width acknowledgement
+// checkboxes that don't fit a two-column rhythm).
+//
+// Layout-only — the rest of the page still uses Tailwind utilities, but this
+// belongs in the DS so apps can opt in via a single class name and theming
+// rules can hang off it later (e.g. `.theme-mars .wizard-dialog-grid`).
+.wizard-dialog-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .wizard-dialog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.wizard-dialog-grid-span-full {
+  grid-column: 1 / -1;
+}
+
 .wizard-dialog-sidebar {
   width: 20rem;
   border-right-color: hsl(var(--divider));
